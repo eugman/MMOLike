@@ -9,5 +9,11 @@ class Entity():
         window.addch(self.x, self.y, self.symbol)
 
     def move(self, dx, dy):
+        current = (self.x, self.y)
+
         self.x += dx
         self.y += dy
+
+        newLoc = (self.x, self.y)
+
+        return current, newLoc
